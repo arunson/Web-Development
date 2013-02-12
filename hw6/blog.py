@@ -307,7 +307,7 @@ class Login(BlogHandler):
 class Logout(BlogHandler):
     def get(self):
         self.logout()
-        self.redirect('/blog/signup')
+        self.redirect('/signup')
 
 class Unit3Welcome(BlogHandler):
     def get(self):
@@ -336,8 +336,8 @@ app = webapp2.WSGIApplication([('/', MainPage),
                                ('/blog/?(?:.json)?', BlogFront),
                                ('/blog/([0-9]+)(?:.json)?', PostPage),
                                ('/blog/newpost', NewPost),
-                               ('/blog/signup', Register),
-                               ('/blog/login', Login),
+                               ('/signup', Register),
+                               ('/login', Login),
                                ('/blog/logout', Logout),
                                ('/logout', Logout),
                                ('/blog/welcome', Unit3Welcome),
